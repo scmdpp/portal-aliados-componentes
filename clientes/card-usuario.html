@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-  <title>Card Component Example</title>
+  <title>Componente B Card cliente (sin desplegar) </title>
   <style>
-    .profile-picture {
-      /*height: 100px;*/
-      object-fit: cover;
-    }
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
 
-    .card-text {
-      text-align: left;
-    }
+  .profile-picture {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
 
-    .list-group-item {
-      text-align: left;
-    }
+  .card-text {
+    text-align: left;
+  }
+
+  .list-group-item {
+    text-align: left;
+  }
   </style>
 </head>
 
@@ -31,13 +37,13 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
+            <h5 class="card-title">Juan Pérez</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Field 1:</strong> Dummy Data 1</li>
-                <li class="list-group-item"><strong>Field 2:</strong> Dummy Data 2</li>
-                <li class="list-group-item"><strong>Field 3:</strong> Dummy Data 3</li>
-                <li class="list-group-item"><strong>Field 4:</strong> Dummy Data 4</li>
-                <li class="list-group-item"><strong>Field 5:</strong> Dummy Data 5</li>
+                <li class="list-group-item"><strong>Estado:</strong> Ya compró</li>
+                <li class="list-group-item"><strong>Ofertas realizadas:</strong> 1</li>
+                <li class="list-group-item"><strong>Área de interés:</strong> Chicó, Teusaquillo</li>
+                <li class="list-group-item"><strong>Rango presupuesto:</strong>120-140M</li>
+                <!--<li class="list-group-item"><strong>Field 5:</strong> Dummy Data 5</li>-->
             </ul>
           </div>
         </div>
