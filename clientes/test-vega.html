@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.23.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.23.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+  <title>Vega Chart Example</title>
+  <style>
+    #chartContainer {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="chartContainer"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Define the Vega specification
+      const spec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "data": {
+          "values": [
+            {"category": "A", "value": 20},
+            {"category": "B", "value": 30},
+            {"category": "C", "value": 10}
+          ]
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {"field": "category", "type": "nominal"},
+          "y": {"field": "value", "type": "quantitative"}
+        }
+      };
+
+      // Embed the Vega chart into the div
+      vegaEmbed('#chartContainer', spec, {renderer: 'canvas'});
+    });
+  </script>
+</body>
+
+</html>
